@@ -1,0 +1,95 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  color:  #7f7b76;
+  padding: 0 3vw;
+}
+
+.left{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding : 10px;
+}
+
+.Mid{
+  padding: 10px;
+  font-family: 'Figue', sans-serif;
+}
+
+.Mid h2{
+  font-weight: lighter;
+}
+
+.right{
+  display: flex;
+  width : 32vw;
+  align-items : center;
+  justify-content: flex-end;
+}
+
+.right i{
+  margin-right: 1vw;
+  color:  #7f7b76 ;
+}
+
+p{
+  margin-right: 1vw;
+  font-weight:  100;
+  font-size: 12px;
+}
+
+p a{
+  color:  #7f7b76 ;
+  text-decoration: none;
+}
+
+p a:hover{
+  text-decoration: underline;
+
+}
+
+.hr{
+  height: 1px;
+  background: #7f7b76;
+  width: 100%;
+}
+
+
+.sub-category{
+  display: flex;
+  justify-content: space-around;
+  width : 100%;
+  font-size: 1vw;
+  margin-bottom: 30px;
+}
+
+
+.sub-category a{
+  text-decoration: none;
+  color : #7f7b76;
+  text-transform: uppercase;
+}
+
+.hr.shop{
+  margin : 0;
+  background-color: #F5F3F1;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.categoryy{
+  margin-top: 10px;
+}
+
+.categoryy h2{
+  font-size: 2.625rem;
+  font-weight: 300;
+  line-height: 3.625rem;
+  font-family: "Figue";
+  padding : 40px;
+}
+
+.content {
+  margin-top : 5vh;
+}

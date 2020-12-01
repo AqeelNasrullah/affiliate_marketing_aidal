@@ -1,0 +1,39 @@
+Affilate links:
+
+
+//FE
+
+
+home page -- Desktop view ready
+sub cateogry pages -- Desktop view Ready
+admin pannel Front-end --
+make pages responsive
+
+
+// backend
+
+server setup  -- Done
+write database model -- Done
+login -- routes setup
+admin pannel{
+  total link count
+  life-time click count -- will think on it.
+  add links
+  remove links
+}
+upload images how????
+send data to FE
+
+implement search feature -- do research
+
+try {
+bookModel.find({$or:[{author:{'$regex':req.query.dsearch}},{books:{'$regex':req.query.dsearch}}]},(err,data)=>{
+if(err){
+console.log(err);
+}else{
+res.render('pages/home',{data:data});
+}
+})
+} catch (error) {
+console.log(error);
+}
