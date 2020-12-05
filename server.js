@@ -29,6 +29,10 @@ app.get("/gifts",(req,res)=>{
   res.render("gifts")
 })
 
+app.get("/:name",(req,res)=>{
+  res.send("404 not found")
+})
+
 // app.get("/register",async (req,res)=>{
 //   try{
 //
@@ -50,9 +54,15 @@ app.get("/gifts",(req,res)=>{
 // }
 // })
 
-
-
-
+//
+//
+// 1 clothin
+// 2 beauty&skin
+// 3 bath
+// 4 Remove thera
+// 5 acces
+// 6 home
+// 7 kid
 
 
 const port = process.env.PORT || 3000;

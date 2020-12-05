@@ -15,5 +15,32 @@ router.get("/logout",async(req,res)=>{
   res.redirect("/login")
 })
 
+router.post("/",verify,(req,res)=>{
+  if(!(req.auth=="valid")){
+    res.redirect("/login")
+    return
+  }
+
+  //Change thumbnail
+
+
+})
+
+router.get("/add",verify,(req,res)=>{
+  if(!(req.auth=="valid")){
+    res.redirect("/login")
+    return
+  }
+  res.render("add")
+})
+
+router.post("/add",verify,(req,res)=>{
+  if(!(req.auth=="valid")){
+    res.redirect("/login")
+    return
+  }
+  //Add new item
+})
+
 
 module.exports = router;
