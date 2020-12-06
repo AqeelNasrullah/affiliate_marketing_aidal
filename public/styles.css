@@ -26,9 +26,8 @@ body{
   background: #F5F3F1;
 }
 .hero-section{
-  /* background-image: url("https://reve-en-vert.com/wp-content/uploads/2020/10/REV-hero-web-V2.jpg");
-  background-size: cover; */
-  background-color: #B4B0A5;
+  background-size: cover;
+  /* background-color: #B4B0A5; */
   height: 100vh;
 }
 .nav.shop{

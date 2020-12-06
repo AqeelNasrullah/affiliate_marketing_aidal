@@ -29,7 +29,7 @@
         <a class="nav-link" href="/dashboard/add">Add Item</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Change Thumbnail</a>
+        <a class="nav-link" href="#" onclick="showthumb()">Change Thumbnail</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/dashboard/logout">Logout</a>
@@ -41,6 +41,13 @@
     </form>
   </div>
 </nav>
+<div class="container">
+  <form class="form-group my-4" action="/dashboard" method="post" enctype="multipart/form-data" style="display : none;">
+  <label for="image">Your Thumbnail : </label>
+  <input type="file" name="image" class="mx-4" value="" id="image">
+  <button type="submit" class="btn btn-primary"name="button">Upload</button>
+</form>
+</div>
   <div class="container my-5">
     <div class="bg-dark p-5 text-center" style="width : 50%; border-radius : 10px;">
     <h3 style="color:white">Total items : 5 </h3>
@@ -175,5 +182,8 @@
     </div>
   </div>
     </div>
+    <script type="text/javascript" src="./main.js">
+
+    </script>
   </body>
 </html>

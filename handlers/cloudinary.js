@@ -1,7 +1,9 @@
 const cloudinary = require('cloudinary');
 
 cloudinary.config({
-  cloud_name : 'blog2345',
-  api_key : '286469287742653',
-  api_secret : 'RnF7L9Xz7Btw5x3IdN7_9dzeSBg'
+  cloud_name : 'aidal',
+  api_key : '172547113657732',
+  api_secret : '6b_TfWwx7Mdhwwvgnovq_1vj9VM'
 })
+
+module.exports = cloudinary;

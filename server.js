@@ -4,7 +4,8 @@ const bp = require('body-parser');
 const cookie = require('cookie-parser');
 const bycrypt = require('bcryptjs')
 const app = express();
-const User = require("./models/users")
+const User = require("./models/users");
+const Thumbnail = require("./models/thumbnail")
 const mongoose = require("mongoose")
 mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false});
 app.use(cookie());
@@ -17,8 +18,14 @@ app.use("/dashboard",require("./routes/dashboard"))
 
 
 
-app.get("/",(req,res)=>{
-  res.render("index");
+app.get("/",async(req,res)=>{
+  try{
+  const thumbnail= await Thumbnail.findOne({id : 1});
+  res.render("index",{thumbnail : thumbnail});
+}
+catch(e){
+  console.log(e);
+}
 })
 
 app.get("/Lifestyle",(req,res)=>{
