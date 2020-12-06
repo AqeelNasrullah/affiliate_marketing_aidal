@@ -45,8 +45,12 @@
   <form class="form-group my-4" action="/dashboard" method="post" enctype="multipart/form-data" style="display : none;">
   <label for="image">Your Thumbnail : </label>
   <input type="file" name="image" class="mx-4" value="" id="image">
-  <button type="submit" class="btn btn-primary"name="button">Upload</button>
+  <button type="submit" class="btn btn-primary subb"name="button" onclick="dis()">Upload</button>
 </form>
+  <div class="uploading" style="display:none;text-align : center;">
+    <img src="./uploading.gif" alt="">
+    <p>Please Wait while the files are being uploaded.</p>
+  </div>
 </div>
   <div class="container my-5">
     <div class="bg-dark p-5 text-center" style="width : 50%; border-radius : 10px;">
