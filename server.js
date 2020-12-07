@@ -7,12 +7,15 @@ const app = express();
 const User = require("./models/users");
 const Thumbnail = require("./models/thumbnail")
 const mongoose = require("mongoose")
+const methodOveride = require("method-override");
+
 mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false});
+
+app.set('view engine','ejs')
 app.use(cookie());
 app.use(bp.urlencoded({extended: true}));
 app.use(express.static("public"));
-app.set('view engine','ejs')
-
+app.use(methodOveride('_method'))
 app.use("/login", require("./routes/login"))
 app.use("/dashboard",require("./routes/dashboard"))
 

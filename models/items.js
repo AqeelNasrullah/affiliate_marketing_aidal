@@ -5,6 +5,7 @@ const ItemsSchema = mongoose.Schema({
   name : String,
   desc : String,
   price : String,
+  cloudinary_id : String,
   thumbnail : String,
   category : String,
   sub_category : String,
