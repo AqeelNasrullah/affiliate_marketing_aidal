@@ -5,7 +5,8 @@ const cookie = require('cookie-parser');
 const bycrypt = require('bcryptjs')
 const app = express();
 const User = require("./models/users");
-const Thumbnail = require("./models/thumbnail")
+const Thumbnail = require("./models/thumbnail");
+const Items = require("./models/items")
 const mongoose = require("mongoose")
 const methodOveride = require("method-override");
 
@@ -18,13 +19,14 @@ app.use(express.static("public"));
 app.use(methodOveride('_method'))
 app.use("/login", require("./routes/login"))
 app.use("/dashboard",require("./routes/dashboard"))
-
+app.use("/edit",require("./routes/edit"))
 
 
 app.get("/",async(req,res)=>{
   try{
   const thumbnail= await Thumbnail.findOne({id : 1});
-  res.render("index",{thumbnail : thumbnail});
+  const items = await Items.find().sort({id:-1}).limit(12);
+  res.render("index",{thumbnail : thumbnail , items : items});
 }
 catch(e){
   console.log(e);

@@ -87,7 +87,7 @@ router.post("/add",verify,upload.single("image"),async (req,res)=>{
   try{
 
   const status = await Count.findOne({id : 1})
-  const result = await cloudinary.v2.uploader.upload(req.file.path);
+  const result = await cloudinary.v2.uploader.upload(req.file.path,{quality : "auto" , fetch_format : "auto", crop : "scale"});
   const item = new Item ({
     id : status.current_id + 1,
     name : req.body.title,

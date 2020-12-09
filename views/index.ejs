@@ -22,7 +22,7 @@
       </div>
 
       <div class="Mid">
-        <h2>Your Title</h2>
+        <h2><a href="/" style="text-decoration : none;color : white ">Acuto</a></h2>
       </div>
 
       <div class="right">
@@ -34,9 +34,9 @@
 
     <div class="aboutSec">
       <div class="left-container">
-        <p>The Platform For Sustainable Living</p>
+        <p style="text-transform : capitalize;">the platform for sustainable living & travel with purpose</p>
         <a class="btn btn-light"href="#">Learn More</a>
-        <a class="btn btn-light"href="#shop" style="padding : 20px 50px;">Shop</a>
+        <a class="btn btn-light"href="#shop" style="padding : 15px 70px;">Shop</a>
       </div>
 
       <!-- <div class="right-container">
@@ -59,90 +59,23 @@
         </p>
       </div>
       <div class="content">
+        <%items.forEach(item =>{%>
         <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
+          <img src="<%=item.thumbnail%>" alt="">
+          <h3><%=item.name%></h3>
+          <p><%=item.desc.substring(0,251)%>
+             <b style="cursor : pointer" onclick="modal(<%=item.id%>)">Read More</b> </p>
 
              <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
+            <p><b>$<%=item.price%></b></p>
+            <a href="<%=item.link%>" class="btn-light">Buy Now</a>
           </div>
         </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
-        <div class="items">
-          <img src="https://azon-dominator.webister.net/uploaded_images/thumbs/segwaydriftw1e-skates_5333096534.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor lobortis tortor sit amet auctor. Praesent pretium, leo eget luctus tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce portLorem ipsum dolor sit amet, consectetur adipiscing elit.
-             <b style="cursor : pointer">Read More</b> </p>
-
-             <div class="buttons">
-            <p><b>$100.00</b></p>
-            <a href="#" class="btn-light">Buy Now</a>
-          </div>
-        </div>
+        <%})%>
       </div>
     </div>
 
   </div>
-  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>

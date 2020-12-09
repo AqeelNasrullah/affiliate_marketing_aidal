@@ -14,14 +14,14 @@ make pages responsive
 
 server setup  -- Done
 write database model -- Done
-login -- routes setup
+login -- done
 admin pannel{
-  total link count
+  total link count done
   life-time click count -- will think on it.
-  add links
+  add links done
   remove links
 }
-upload images how????
+upload images how???? done
 send data to FE
 
 implement search feature -- do research
