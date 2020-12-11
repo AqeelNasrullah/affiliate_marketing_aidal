@@ -22,7 +22,7 @@
       </div>
 
       <div class="Mid">
-        <h2><a href="/" style="text-decoration : none;color : white ">Acuto</a></h2>
+        <h2><a href="/" style="text-decoration : none;color : white ">acotu</a></h2>
       </div>
 
       <div class="right">
@@ -62,9 +62,9 @@
         <%items.forEach(item =>{%>
         <div class="items">
           <img src="<%=item.thumbnail%>" alt="">
-          <h3><%=item.name%></h3>
-          <p><%=item.desc.substring(0,251)%>
-             <b style="cursor : pointer" onclick="modal(<%=item.id%>)">Read More</b> </p>
+          <h3 style="margin:0;"><%=item.name%></h3>
+          <p style="margin:0;"><%=item.desc.substring(0,251)%>
+             <b style="cursor : pointer; margin-left:10px;" onclick="modal(<%=item.id%>)">Read More</b> </p>
 
              <div class="buttons">
             <p><b>$<%=item.price%></b></p>

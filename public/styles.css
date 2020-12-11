@@ -195,8 +195,8 @@ text-transform: uppercase;
 }
 
 .content{
-  display: grid;
-  grid-template-columns: 49.25vw 49.25vw;
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
@@ -205,12 +205,12 @@ text-transform: uppercase;
 }
 
 .items img{
-  width : 100%;
-  height : 100vh;
+  width : 650px;
+  height : 780px;
 }
 
 .buttons{
-  margin-top: 23px;
+  margin-top: 1px;
   display: flex;
   justify-content: space-between;
 }
