@@ -195,24 +195,32 @@ text-transform: uppercase;
 }
 
 .content{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap : 10px;
+  justify-content: center;
+  align-items: center;
+
 
 }
 
 .items{
   padding : 20px 5px 20px 5px;
+  min-width: 680px;
 }
 
 .items img{
   width : 650px;
   height : 780px;
+  margin-left: 50px;
+  margin-bottom: 10px;
 }
 
 .buttons{
   margin-top: 1px;
   display: flex;
   justify-content: space-between;
+  margin : 0 20px;
 }
 .buttons a{
   padding: 10px;
