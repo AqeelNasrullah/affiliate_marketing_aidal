@@ -22,6 +22,18 @@ router.get("/",verify,async (req,res)=>{
   }
 })
 
+
+router.get("/allpost",async(req,res)=>{
+  try{
+
+  const items = await Item.find().sort({id:-1});
+  res.render("searchAdmin",{items  : items})
+}
+catch(e){
+  res.send(e.message)
+}
+})
+
 router.get("/logout",async(req,res)=>{
   res.clearCookie("token");
   res.redirect("/login")
