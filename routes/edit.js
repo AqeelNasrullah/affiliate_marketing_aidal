@@ -24,6 +24,7 @@ router.post("/:id",verify,async(req,res)=>{
     price : req.body.price,
     sub_category : req.body.sub,
     link : req.body.link,
+    category : req.body.category
   },function(err){
     if(err){
       res.send(err)
