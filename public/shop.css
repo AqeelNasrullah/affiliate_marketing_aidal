@@ -3,13 +3,13 @@
   justify-content: space-between;
   color:  #7f7b76;
   padding: 0 3vw;
+  margin-top: -24px;
 }
 
 .left{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding : 10px;
 }
 
 .Mid{
@@ -20,6 +20,12 @@
 .Mid h2{
   font-weight: lighter;
 }
+
+.Mid h2 a{
+  color:  #7f7b76;
+}
+
+
 
 .right{
   display: flex;
@@ -41,7 +47,7 @@ p{
 
 p a{
   color:  #7f7b76 ;
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 p a:hover{
@@ -50,11 +56,20 @@ p a:hover{
 }
 
 .hr{
+  margin-top: -16px;
   height: 1px;
-  background: #7f7b76;
+  background: white;
   width: 100%;
 }
 
+.left-container-shop{
+  width : 450px;
+}
+
+
+.home-page{
+  padding-top : 13vh;
+}
 
 .sub-category{
   display: flex;

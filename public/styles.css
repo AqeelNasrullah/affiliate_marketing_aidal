@@ -144,16 +144,24 @@ p a:hover{
 
 
 
+hr.section{
+  background-color: #F5F3F1;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height:0;
+}
+
 
 .shop-section{
-  margin-top: 30px;
+  margin-top : 3vh;
 }
 
 .heading{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 15vh;
+  padding-bottom: 11vh;
 }
 
 .heading h2{
@@ -205,8 +213,8 @@ text-transform: uppercase;
 }
 
 .items{
-  padding : 20px 5px 20px 5px;
-  max-width: 680px;
+  padding : 25px 5px 20px 5px;
+  max-width: 660px;
   margin: auto;
 }
 
