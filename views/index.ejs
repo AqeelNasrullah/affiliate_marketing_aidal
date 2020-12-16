@@ -5,6 +5,7 @@
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 
@@ -63,12 +64,12 @@
         <div class="items">
           <img src="<%=item.thumbnail%>" alt="">
           <h3 style="margin:0;"><%=item.name%></h3>
-          <p style="margin:0;"><%=item.desc.substring(0,251)%>
-             <b style="cursor : pointer; margin-left:10px;" onclick="modal(<%=item.id%>)">Read More</b> </p>
+          <p class="item__desc"><%=item.desc.substring(0,351)%>
+             <b style="cursor : pointer;" onclick="modal(<%=item.id%>)">Read More</b> </p>
 
              <div class="buttons">
-            <p><b><%=item.price%></b></p>
-            <a href="<%=item.link%>" class="btn-light">Buy Now</a>
+            <p class="item__price"><b><%=item.price%></b></p>
+            <a href="<%=item.link%>" class="btn-light buy-btn">Buy Now</a>
           </div>
         </div>
         <%})%>
