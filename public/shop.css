@@ -47,13 +47,9 @@ p{
 
 p a{
   color:  #7f7b76 ;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
-p a:hover{
-  text-decoration: underline;
-
-}
 
 .hr{
   margin-top: -16px;

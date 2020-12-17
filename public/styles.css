@@ -270,3 +270,35 @@ text-transform: uppercase;
   transition: 0.5s;
   border : 1px solid white;
 }
+
+.loading-sec{
+  text-align: center;
+  margin : 32px;
+}
+
+.container__load-more{
+  margin-top: 100px;
+}
+.load-more{
+  color : black;
+  cursor: pointer;
+  padding : 20px;
+  border : 1px solid black;
+  transition: 0.5s;
+}
+
+
+.load-more:hover{
+  background: black;
+  color : white;
+}
+
+#loading-png{
+  width : 200px;
+  display: none;
+}
+
+#No-more{
+  margin-top : 16px;
+  display: none;
+}

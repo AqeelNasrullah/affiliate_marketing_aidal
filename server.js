@@ -20,6 +20,7 @@ app.use(methodOveride('_method'))
 app.use("/login", require("./routes/login"))
 app.use("/dashboard",require("./routes/dashboard"))
 app.use("/edit",require("./routes/edit"))
+app.use("/loadmore",require("./routes/loadmore"))
 
 
 app.get("/",async(req,res)=>{
@@ -33,8 +34,26 @@ catch(e){
 }
 })
 
-app.get("/Lifestyle",(req,res)=>{
-  res.render("lifestyle")
+app.get("/Lifestyle",async(req,res)=>{
+  try{
+    let items = [];
+    let item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Clothing"}]}).limit(4).sort({id:-1});
+    items.push(...item);
+    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Home"}]}).limit(4).sort({id:-1});
+    items.push(...item);
+    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Beauty & Skincare"}]}).limit(4).sort({id:-1});
+    items.push(...item);
+    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Accessories"}]}).limit(4).sort({id:-1});
+    items.push(...item);
+    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Bath & Body"}]}).limit(4).sort({id:-1});
+    items.push(...item);
+    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Books"}]}).limit(4).sort({id:-1});
+    items.push(...item);
+    res.render("lifestyle",{items : items})
+  }
+  catch(e){
+    res.send(e.message)
+  }
 })
 
 app.get("/gifts",(req,res)=>{
@@ -74,7 +93,8 @@ app.get("/:name",(req,res)=>{
 // 4 Remove thera
 // 5 acces
 // 6 home
-// 7 kid
+// 7 Books
+// 8 kid
 
 
 const port = process.env.PORT || 3000;
