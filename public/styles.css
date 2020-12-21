@@ -86,7 +86,6 @@ p a{
 
 p a:hover{
   background: white;
-  border-radius: 10px;
   color: black;
   transition: 0.5s;
 }
@@ -283,9 +282,23 @@ text-transform: uppercase;
   color : black;
   cursor: pointer;
   padding : 20px;
-  border : 1px solid black;
+  border : 1px solid #a19d99;
   transition: 0.5s;
+  font-family: "Raleway",sans-serif;
+  font-weight: 600;
+  color : #a19d99;
 }
+
+.loading-sec.lifestyle-loading{
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.loading-sec.lifestyle-loading.active{
+  margin-top: 0;
+}
+
+
 
 
 .load-more:hover{

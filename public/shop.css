@@ -71,8 +71,8 @@ p a{
   display: flex;
   justify-content: space-around;
   width : 100%;
-  font-size: 1vw;
-  margin-bottom: 30px;
+  font-size: 12px;
+  margin-bottom: 48px;
 }
 
 
@@ -80,25 +80,32 @@ p a{
   text-decoration: none;
   color : #7f7b76;
   text-transform: uppercase;
+
 }
 
-.hr.shop{
+hr{
+  margin-top: 1rem;
+margin-bottom: 1rem;
+border: 0;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+background-color: #ccc;
+font-family: 'Figue';
+    color: #5B5245;
+}
+
+.inner__hr{
   margin : 0;
   background-color: #F5F3F1;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 .categoryy{
-  margin-top: 10px;
 }
 
 .categoryy h2{
   font-size: 2.625rem;
   font-weight: 300;
-  line-height: 3.625rem;
   font-family: "Figue";
-  padding : 40px;
+  padding : 11vh 5vw;
+  color : #5B5245;
 }
 
 .content {

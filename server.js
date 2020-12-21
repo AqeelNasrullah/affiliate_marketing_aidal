@@ -47,7 +47,7 @@ app.get("/Lifestyle",async(req,res)=>{
     items.push(...item);
     item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Bath & Body"}]}).limit(4).sort({id:-1});
     items.push(...item);
-    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Books"}]}).limit(4).sort({id:-1});
+    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Jewelry"}]}).limit(4).sort({id:-1});
     items.push(...item);
     res.render("lifestyle",{items : items})
   }
