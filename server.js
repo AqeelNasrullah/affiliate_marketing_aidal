@@ -34,21 +34,25 @@ catch(e){
 }
 })
 
-app.get("/Lifestyle",async(req,res)=>{
+
+async function findItems(category , subArray){
   try{
     let items = [];
-    let item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Clothing"}]}).limit(4).sort({id:-1});
-    items.push(...item);
-    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Home"}]}).limit(4).sort({id:-1});
-    items.push(...item);
-    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Beauty & Skincare"}]}).limit(4).sort({id:-1});
-    items.push(...item);
-    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Accessories"}]}).limit(4).sort({id:-1});
-    items.push(...item);
-    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Bath & Body"}]}).limit(4).sort({id:-1});
-    items.push(...item);
-    item = await Items.find({$and : [ {category : 'lifestyle' , sub_category:"Jewelry"}]}).limit(4).sort({id:-1});
-    items.push(...item);
+    for(let i=0;i<subArray.length;i++){
+      let itemm = await Items.find({$and : [ {category : category , sub_category:subArray[i]}]}).limit(4).sort({id:-1});
+      items.push(...itemm)
+    }
+    return items;
+  }
+  catch(e){
+    res.send("Internal Server Error")
+  }
+}
+
+app.get("/Lifestyle",async(req,res)=>{
+  try{
+    let sub = ['Clothing' , 'Home' ,'Beauty & Skincare',"Accessories","Bath & Body","Jewelry","Kids"]
+    let items  = await findItems('lifestyle', sub)
     res.render("lifestyle",{items : items})
   }
   catch(e){
@@ -57,11 +61,23 @@ app.get("/Lifestyle",async(req,res)=>{
 })
 
 app.get("/gifts",(req,res)=>{
-  res.render("gifts")
+  res.render("gifts");
+})
+
+app.get("/stories",(req,res)=>{
+  res.render("stories");
+})
+
+app.get("/experiences",(req,res)=>{
+  res.render("experiences",{items : []});
+})
+
+app.get("/shobycause",(req,res)=>{
+  res.render("shopbycause",{items : []});
 })
 
 app.get("/:name",(req,res)=>{
-  res.send("404 not found")
+  res.send("404 not found");
 })
 
 // app.get("/register",async (req,res)=>{
