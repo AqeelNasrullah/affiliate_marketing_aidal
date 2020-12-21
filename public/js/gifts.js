@@ -1,20 +1,15 @@
 let k = {
-  Clothing : 1,
-  Beauty : 1,
-  Bath :1,
-  Accessories : 1,
-  Home : 1,
-  Jwelery :1,
-  Kids : 1,
+  her :1,
+  him :1,
 }
 
 function loadmore(sub_category) {
   let sub = sub_category;
-  if(sub_category == "Beauty"){
-    sub = 'Beauty & Skincare'
+  if(sub_category == "him"){
+    sub = 'GIFTS FOR HIM'
   }
-  else if (sub_category =="Bath") {
-    sub = 'Bath & Body';
+  else if (sub_category =="her") {
+    sub = 'GIFTS FOR HER';
   }
   let container = document.getElementById(sub);
   let content = container.getElementsByClassName('content')[0];
@@ -26,7 +21,7 @@ function loadmore(sub_category) {
   containerr.style.display="none";
   loadingSec.classList.toggle('active');
   loading_img.style.display = "inline-block";
-   $.post(`/loadmore/lifestyle/${sub}`,{count : k[sub_category] },function(data){
+   $.post(`/loadmore/gift/${sub}`,{count : k[sub_category] },function(data){
       if(data.length == 0){
         noMore.style.display = "block";
         loading_img.style.display = "none";

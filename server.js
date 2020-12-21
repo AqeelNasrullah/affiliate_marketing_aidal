@@ -60,8 +60,10 @@ app.get("/Lifestyle",async(req,res)=>{
   }
 })
 
-app.get("/gifts",(req,res)=>{
-  res.render("gifts");
+app.get("/gifts",async(req,res)=>{
+  let sub =["GIFTS FOR HER", "GIFTS FOR HIM"];
+  let items = await findItems('gift',sub);
+  res.render("gifts",{items : items});
 })
 
 app.get("/stories",(req,res)=>{
