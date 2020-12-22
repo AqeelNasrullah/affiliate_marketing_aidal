@@ -23,8 +23,12 @@ body{
 
 }
 
+.hero-section-shop{
+  background: #EEEEEE;
+}
+
 .hero-section-experience{
-    background: #D8E1E0;
+    background: #DDE0DB;
 }
 
 .hero-section{
