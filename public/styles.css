@@ -23,9 +23,10 @@ body{
 
 }
 
-.hero-section-shop{
-  background: #F5F3F1;
+.hero-section-experience{
+    background: #D8E1E0;
 }
+
 .hero-section{
   background-size: cover;
   /* background-color: #B4B0A5; */
