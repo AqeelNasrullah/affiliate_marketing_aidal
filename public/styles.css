@@ -23,12 +23,16 @@ body{
 
 }
 
+.hero-section-stories{
+  background: #f5f3f1;
+}
+
 .hero-section-shop{
   background: #EEEEEE;
 }
 
 .hero-section-experience{
-    background: #DDE0DB;
+    background: #DCE1DB;
 }
 
 .hero-section{
