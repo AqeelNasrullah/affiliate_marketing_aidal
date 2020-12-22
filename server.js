@@ -70,8 +70,10 @@ app.get("/stories",(req,res)=>{
   res.render("stories");
 })
 
-app.get("/experiences",(req,res)=>{
-  res.render("experiences",{items : []});
+app.get("/experiences",async (req,res)=>{
+  let sub = ['Europe','Africa','Asia','America','Antarctica','Australasia'];
+  let items = await findItems('experience',sub)
+  res.render("experiences",{items : items});
 })
 
 app.get("/shobycause",(req,res)=>{

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -59,7 +59,7 @@
           <img src="<%=item.thumbnail%>" alt="">
           <h3 style="margin:0;"><%=item.name%></h3>
           <p class="item__desc"><%=item.desc.substring(0,351)%>
-             <b style="cursor : pointer;" onclick="modal(<%=item.id%>)">Read More</b> </p>
+              <b style="cursor : pointer;" onclick="modal({name : '<%=item.name%>' , description : `<%=item.desc%>`, price : '<%=item.price%>' , link : '<%=item.link%>'})">Read More</b> </p>
 
              <div class="buttons">
             <p class="item__price"><b><%=item.price%></b></p>
@@ -73,7 +73,7 @@
         <div class="container__load-more" id="container__load-more">
           <a class="btn-light btn-lg load-more" name="button" id="load-more" onclick="loadmore('her')">LOAD MORE</a>
         </div>
-        <img src = "https://cdn.dribbble.com/users/2014028/screenshots/4337298/flower_puzzles_preloader_for_dribble.gif" alt="" id="loading-png" class="loading-png">
+
         <p id="No-more" class="No-more">NO MORE ITEMS TO LOAD.</p>
       </div>
     </div>
@@ -90,7 +90,7 @@
           <img src="<%=item.thumbnail%>" alt="">
           <h3 style="margin:0;"><%=item.name%></h3>
           <p class="item__desc"><%=item.desc.substring(0,351)%>
-             <b style="cursor : pointer;" onclick="modal(<%=item.id%>)">Read More</b> </p>
+              <b style="cursor : pointer;" onclick="modal({name : '<%=item.name%>' , description : `<%=item.desc%>`, price : '<%=item.price%>' , link : '<%=item.link%>'})">Read More</b> </p>
 
              <div class="buttons">
             <p class="item__price"><b><%=item.price%></b></p>
@@ -104,13 +104,25 @@
         <div class="container__load-more" id="container__load-more">
           <a class="btn-light btn-lg load-more" name="button" id="load-more" onclick="loadmore('him')">LOAD MORE</a>
         </div>
-        <img src = "https://cdn.dribbble.com/users/2014028/screenshots/4337298/flower_puzzles_preloader_for_dribble.gif" alt="" id="loading-png" class="loading-png">
+
         <p id="No-more" class="No-more">NO MORE ITEMS TO LOAD.</p>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <p class="close" onclick="modalClose()">x</p>
+        <h1 class="title" id="title"></h1>
+        <p class="description" id="description"></p>
+        <div class="buttons" style="padding-bottom : 32px;">
+          <p class"item__price"><b id=price>$100</b></p>
+          <a href="" class="btn-light buy-btn" id="link">Buy Now</a>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/gifts.js">
 
     </script>
+        <script type="text/javascript" src="./js/modal.js"></script>
   </body>
 </html>
