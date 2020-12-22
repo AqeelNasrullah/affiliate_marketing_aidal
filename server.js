@@ -21,6 +21,7 @@ app.use("/login", require("./routes/login"))
 app.use("/dashboard",require("./routes/dashboard"))
 app.use("/edit",require("./routes/edit"))
 app.use("/loadmore",require("./routes/loadmore"))
+app.use("/changethumbnail",require("./routes/changethumbnail"))
 
 
 app.get("/",async(req,res)=>{

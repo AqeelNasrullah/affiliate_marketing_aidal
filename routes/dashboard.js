@@ -50,7 +50,7 @@ router.post("/",verify,upload.single('image'),async (req,res)=>{
   const thuu = await Thumbnail.findOne({id : 1});
   await cloudinary.uploader.destroy(thuu.cloudinary_id);
   const result = await cloudinary.v2.uploader.upload(req.file.path);
-  const thumb = Thumbnail.findOneAndUpdate({id : 1}, {cloudinary_id : result.public_id, url : result.secure_url},function(err){
+  const thumb = await Thumbnail.findOneAndUpdate({id : 1}, {cloudinary_id : result.public_id, url : result.secure_url},function(err){
     if(err){
       console.log(err);
     }
