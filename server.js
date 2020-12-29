@@ -1,89 +1,108 @@
 require("dotenv").config();
-const express = require('express');
-const bp = require('body-parser');
-const cookie = require('cookie-parser');
-const bycrypt = require('bcryptjs')
+const express = require("express");
+const bp = require("body-parser");
+const cookie = require("cookie-parser");
+const bycrypt = require("bcryptjs");
 const app = express();
 const User = require("./models/users");
 const Thumbnail = require("./models/thumbnail");
-const Items = require("./models/items")
-const mongoose = require("mongoose")
+const Items = require("./models/items");
+const mongoose = require("mongoose");
 const methodOveride = require("method-override");
 
-mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false});
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
-app.set('view engine','ejs')
+app.set("view engine", "ejs");
 app.use(cookie());
-app.use(bp.urlencoded({extended: true}));
+app.use(bp.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(methodOveride('_method'))
-app.use("/login", require("./routes/login"))
-app.use("/dashboard",require("./routes/dashboard"))
-app.use("/edit",require("./routes/edit"))
-app.use("/loadmore",require("./routes/loadmore"))
-app.use("/changethumbnail",require("./routes/changethumbnail"))
+app.use(methodOveride("_method"));
+app.use("/login", require("./routes/login"));
+app.use("/dashboard", require("./routes/dashboard"));
+app.use("/edit", require("./routes/edit"));
+app.use("/loadmore", require("./routes/loadmore"));
+app.use("/changethumbnail", require("./routes/changethumbnail"));
 
+app.get("/", async (req, res) => {
+  try {
+    const thumbnail = await Thumbnail.findOne({ id: 1 });
+    const items = await Items.find().sort({ id: -1 }).limit(12);
+    res.render("index", { thumbnail: thumbnail, items: items });
+  } catch (e) {
+    console.log(e);
+  }
+});
 
-app.get("/",async(req,res)=>{
-  try{
-  const thumbnail= await Thumbnail.findOne({id : 1});
-  const items = await Items.find().sort({id:-1}).limit(12);
-  res.render("index",{thumbnail : thumbnail , items : items});
-}
-catch(e){
-  console.log(e);
-}
-})
-
-
-async function findItems(category , subArray){
-  try{
+async function findItems(category, subArray) {
+  try {
     let items = [];
-    for(let i=0;i<subArray.length;i++){
-      let itemm = await Items.find({$and : [ {category : category , sub_category:subArray[i]}]}).limit(4).sort({id:-1});
-      items.push(...itemm)
+    for (let i = 0; i < subArray.length; i++) {
+      let itemm = await Items.find({
+        $and: [{ category: category, sub_category: subArray[i] }],
+      })
+        .limit(4)
+        .sort({ id: -1 });
+      items.push(...itemm);
     }
     return items;
-  }
-  catch(e){
-    res.send("Internal Server Error")
+  } catch (e) {
+    res.send("Internal Server Error");
   }
 }
 
-app.get("/Lifestyle",async(req,res)=>{
-  try{
-    let sub = ['Clothing' , 'Home' ,'Beauty & Skincare',"Accessories","Bath & Body","Jewelry","Kids"]
-    let items  = await findItems('lifestyle', sub)
-    res.render("lifestyle",{items : items})
+app.get("/Lifestyle", async (req, res) => {
+  try {
+    let sub = [
+      "Clothing",
+      "Home",
+      "Beauty & Skincare",
+      "Accessories",
+      "Bath & Body",
+      "Jewelry",
+      "Kids",
+    ];
+    let items = await findItems("lifestyle", sub);
+    res.render("lifestyle", { items: items });
+  } catch (e) {
+    res.send(e.message);
   }
-  catch(e){
-    res.send(e.message)
-  }
-})
+});
 
-app.get("/gifts",async(req,res)=>{
-  let sub =["GIFTS FOR HER", "GIFTS FOR HIM"];
-  let items = await findItems('gift',sub);
-  res.render("gifts",{items : items});
-})
+app.get("/gifts", async (req, res) => {
+  let sub = ["GIFTS FOR HER", "GIFTS FOR HIM"];
+  let items = await findItems("gift", sub);
+  res.render("gifts", { items: items });
+});
 
-app.get("/stories",(req,res)=>{
+app.get("/stories", (req, res) => {
   res.render("stories");
-})
+});
 
-app.get("/experiences",async (req,res)=>{
-  let sub = ['Europe','Africa','Asia','America','Antarctica','Australasia'];
-  let items = await findItems('experience',sub)
-  res.render("experiences",{items : items});
-})
+app.get("/experiences", async (req, res) => {
+  let sub = [
+    "Europe",
+    "Africa",
+    "Asia",
+    "America",
+    "Antarctica",
+    "Australasia",
+  ];
+  let items = await findItems("experience", sub);
+  res.render("experiences", { items: items });
+});
 
-app.get("/shobycause",(req,res)=>{
-  res.render("shopbycause",{items : []});
-})
+app.get("/shobycause", (req, res) => {
+  res.render("shopbycause", { items: [] });
+});
 
-app.get("/:name",(req,res)=>{
+app.get("/:name", (req, res) => {
   res.send("404 not found");
-})
+});
 
 // app.get("/register",async (req,res)=>{
 //   try{
@@ -117,9 +136,8 @@ app.get("/:name",(req,res)=>{
 // 7 Books
 // 8 kid
 
+const port = process.env.PORT || 5000;
 
-const port = process.env.PORT || 3000;
-
-app.listen(port,()=>{
-  console.log("Server up on port 3000");
-})
+app.listen(port, () => {
+  console.log(`Server up on port ${port}`);
+});
