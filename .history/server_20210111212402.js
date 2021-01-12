@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useFindAndModify: false,
 });
 
-app.locals.baseURL = "https://affiliate-marketing-aidal.herokuapp.com/";
+app.locals.baseURL = "http://localhost:5000";
 
 let top_items = [
   {
