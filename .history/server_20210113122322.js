@@ -232,7 +232,7 @@ app.get("/shobycause", (req, res) => {
 });
 
 app.get('/addstory', (req, res) => {
-  res.render('add-story');
+  
 });
 
 app.get("/:name", (req, res) => {
