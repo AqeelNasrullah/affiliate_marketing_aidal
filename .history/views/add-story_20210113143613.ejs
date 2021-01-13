@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -189,91 +189,55 @@
         </div>
       </div>
 
-      <div style="width: 1370px; margin: 0px auto; margin-bottom: 50px">
+      <div style="width: 1370px;margin: 0px auto;margin-bottom: 50px;">
         <form action="" method="post">
-          <div>
-            <div style="width: 70%; float: left">
-              <label for="title">Title<span>*</span>:</label>
-              <input
-                type="text"
-                placeholder="Title"
-                name="title"
-                id="title"
-                class="form-control"
-              />
-
-              <div>
-                <div
-                  style="
-                    width: 50%;
-                    float: left;
-                    padding-right: 10px;
-                    box-sizing: border-box;
-                  "
-                >
-                  <label for="title">Category<span>*</span>:</label>
-                  <div class="form-control-background">
-                    <select name="category" id="category" class="form-control">
-                      <option value="Fashion">Fashion</option>
-                      <option value="Beauty">Beauty</option>
-                      <option value="Life Style">Life Style</option>
-                      <option value="Travel">Travel</option>
-                    </select>
+            <div>
+              <div style="width: 70%;float: left;">
+                <label for="title">Title<span>*</span>:</label>
+                <input type="text" placeholder="Title" name="title" id="title" class="form-control" />
+                
+                <div>
+                  <div style="width: 50%;float:left;padding-right: 10px;box-sizing: border-box;">
+                    <label for="title">Category<span>*</span>:</label>
+                    <div class="form-control-background">
+                      <select name="category" id="category" class="form-control">
+                        <option value="Fashion">Fashion</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Life Style">Life Style</option>
+                        <option value="Travel">Travel</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
-                <div
-                  style="
-                    width: 50%;
-                    float: right;
-                    padding-left: 10px;
-                    box-sizing: border-box;
-                  "
-                >
-                  <label for="img">Thumbnail<span>*</span>:</label>
-                  <div class="form-control" id="thumbnail">
-                    <input type="file" name="thumbnail" id="img" />
+                  <div style="width: 50%;float:right;padding-left: 10px;box-sizing: border-box;">
+                    <label for="img">Thumbnail<span>*</span>:</label>
+                    <div class="form-control" id="thumbnail">
+                      <input type="file" name="thumbnail" id="img">
+                    </div>
                   </div>
+                  <br style="clear: both;" />
                 </div>
-                <br style="clear: both" />
               </div>
+              <div style="width: 30%;height: 200px;box-sizing:border-box;padding-left: 20px;float: left;overflow: hidden;">
+                <img src="https://cdn.shopify.com/s/files/1/0047/8904/3270/articles/image00010_720x.jpg?v=1598466964" id="display-thumbnail" width="100%" alt="Not Found" />
+              </div>
+              <br style="clear: both;" />
             </div>
-            <div
-              style="
-                width: 30%;
-                height: 200px;
-                box-sizing: border-box;
-                padding-left: 20px;
-                float: left;
-                overflow: hidden;
-              "
-            >
-              <img
-                src="https://cdn.shopify.com/s/files/1/0047/8904/3270/articles/image00010_720x.jpg?v=1598466964"
-                id="display-thumbnail"
-                width="100%"
-                alt="Not Found"
-              />
+            <div>
+              <label for="desc">Description<span>*</span>:</label>
+              <br><br>
+              <textarea name="desc" id="desc" class="form-control" placeholder="Description" rows="15"></textarea>
+              <br>
             </div>
-            <br style="clear: both" />
-          </div>
-          <div>
-            <label for="desc">Description<span>*</span>:</label>
-            <br /><br />
-            <textarea
-              name="desc"
-              id="desc"
-              class="form-control"
-              placeholder="Description"
-              rows="15"
-            ></textarea>
-            <br />
-          </div>
-          <div>
-            <button type="submit" class="btn">Add Story</button>
-            <br style="clear: both" />
-          </div>
-        </form>
+            <div>
+              <button type="submit" class="btn">Add Story</button>
+              <br style="clear: both;" />
+            </div>
+          </form>
       </div>
+        
+      
+
+      
     </div>
 
     <div class="s_footer" style="background-color: rgba(50, 50, 50, 1)">
@@ -336,20 +300,21 @@
         function readURL(input) {
           if (input.files && input.files[0]) {
             var reader = new FileReader();
-
-            reader.onload = function (e) {
-              $("#display-thumbnail").attr("src", e.target.result);
-            };
-
+            
+            reader.onload = function(e) {
+              $('#display-thumbnail').attr('src', e.target.result);
+            }
+            
             reader.readAsDataURL(input.files[0]); // convert to base64 string
           }
         }
 
-        $("#img").change(function () {
+        $("#img").change(function() {
           readURL(this);
         });
 
-        CKEDITOR.replace("desc");
+        CKEDITOR.replace('desc');
+        
       });
     </script>
     <!-- <script>

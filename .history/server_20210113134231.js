@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI, {
   useFindAndModify: false,
 });
 
-app.locals.baseURL = "http://localhost:5000";
+app.locals.baseURL = "http://localhost:500";
 
 let top_items = [
   {
