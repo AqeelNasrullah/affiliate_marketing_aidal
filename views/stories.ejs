@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stories</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"
@@ -232,13 +233,13 @@
       </div>
 
       <div class="content">
-        <% top_items.forEach(item => { %>
+        <%{console.log(items)}%> <%items.forEach(item => { %>
         <div class="items">
           <img src="<%= item.thumbnail %>" alt="" style="margin-bottom: 20px" />
           <p><%= item.category.toUpperCase() %></p>
           <h2><%= item.title %></h2>
           <p style="margin-bottom: 30px; font-size: 15px">
-            <%= item.description.substring(0, 255) + '...' %>
+            <%= item.desc.substring(0, 255) + '...' %>
           </p>
           <a href="/stories/<%= item.title %>" class="btn-more">Read More</a>
         </div>
@@ -264,7 +265,7 @@
             <p><%= item.category.toUpperCase() %></p>
             <h4 style="margin-top: 0px"><%= item.title %></h4>
             <p style="margin-bottom: 30px; font-size: 15px">
-              <%= item.description.substring(0, 100) + '...' %>
+              <%= item.desc.substring(0, 100) + '...' %>
             </p>
             <a href="/stories/<%= item.title %>" class="btn-more">Read More</a>
           </div>
@@ -291,7 +292,7 @@
             <p><%= item.category.toUpperCase() %></p>
             <h4 style="margin-top: 0px"><%= item.title %></h4>
             <p style="margin-bottom: 30px; font-size: 15px">
-              <%= item.description.substring(0, 100) + '...' %>
+              <%= item.desc.substring(0, 100) + '...' %>
             </p>
             <a href="/stories/<%= item.title %>" class="btn-more">Read More</a>
           </div>
@@ -318,7 +319,7 @@
             <p><%= item.category.toUpperCase() %></p>
             <h4 style="margin-top: 0px"><%= item.title %></h4>
             <p style="margin-bottom: 30px; font-size: 15px">
-              <%= item.description.substring(0, 100) + '...' %>
+              <%= item.desc.substring(0, 100) + '...' %>
             </p>
             <a href="/stories/<%= item.title %>" class="btn-more">Read More</a>
           </div>
@@ -345,7 +346,7 @@
             <p><%= item.category.toUpperCase() %></p>
             <h4 style="margin-top: 0px"><%= item.title %></h4>
             <p style="margin-bottom: 30px; font-size: 15px">
-              <%= item.description.substring(0, 100) + '...' %>
+              <%= item.desc.substring(0, 100) + '...' %>
             </p>
             <a href="/stories/<%= item.title %>" class="btn-more">Read More</a>
           </div>
