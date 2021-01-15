@@ -246,13 +246,9 @@ app.get("/stories", async (req, res) => {
   }
 });
 
-app.get("/stories/:story", (req, res) => {
+app.get("/stories/:story", async (req, res) => {
   let ttl = req.params.story;
-  top_items.forEach(item => {
-    if (item.name == ttl) {
-      res.render("single-story", { story: item });
-    }
-  });
+  const items = await Blog.find().sort({ Date: -1 });
   items.forEach(item => {
     if (item.name == ttl) {
       res.render("single-story", { story: item });
