@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 app.locals.baseURL = "http://affiliate-marketing-aidal.herokuapp.com";
+// app.locals.baseURL = "http://localhost:5000";
 
 app.set("view engine", "ejs");
 app.use(cookie());
