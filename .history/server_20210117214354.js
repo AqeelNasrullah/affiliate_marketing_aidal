@@ -136,13 +136,7 @@ const items = [
   },
   {
     id: 2,
-    thumbnail: 'https://47awq13mlhod44f65712k455-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/zoe-feature-430x580.jpg',
-    name: 'Breast Cancer Awareness Month with Zoe Lind van’t Hof of Boobs Essential'
-  },
-  {
-    id: 3,
-    thumbnail: 'https://47awq13mlhod44f65712k455-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/fmiller-feature-430x580.jpg',
-    name: 'Natural Beauties with Fran Miller of F. Miller Skincare'
+    thumbnail: ''
   }
 ]
 

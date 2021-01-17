@@ -32,6 +32,7 @@ app.use(express.static("public"));
 app.use(methodOveride("_method"));
 app.use("/login", require("./routes/login"));
 app.use("/dashboard", require("./routes/dashboard"));
+app.use("/storieslist", require("./routes/storieslist"));
 app.use("/edit", require("./routes/edit"));
 app.use("/loadmore", require("./routes/loadmore"));
 app.use("/changethumbnail", require("./routes/changethumbnail"));
@@ -126,28 +127,6 @@ app.get("/shobycause", (req, res) => {
 
 app.get("/addstory", verify, (req, res) => {
   res.render("add-story");
-});
-
-const items = [
-  {
-    id: 1,
-    thumbnail: 'https://47awq13mlhod44f65712k455-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/brightening-skincare-feature-430x580.jpg',
-    name: 'Organic Skincare to Brighten your Complexion in the Winter Months'
-  },
-  {
-    id: 2,
-    thumbnail: 'https://47awq13mlhod44f65712k455-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/zoe-feature-430x580.jpg',
-    name: 'Breast Cancer Awareness Month with Zoe Lind van’t Hof of Boobs Essential'
-  },
-  {
-    id: 3,
-    thumbnail: 'https://47awq13mlhod44f65712k455-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/fmiller-feature-430x580.jpg',
-    name: 'Natural Beauties with Fran Miller of F. Miller Skincare'
-  }
-]
-
-app.get("/storieslist", verify, (req, res) => {
-  res.render("stories-list", {count: 3, items: items});
 });
 
 app.get("/:name", (req, res) => {
