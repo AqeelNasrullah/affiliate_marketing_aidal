@@ -12,40 +12,10 @@
     <style>
       #search {width: 150px;height: 30px;padding-left: 10px;border: 1px solid gray;margin: 0px !important;border-right: none !important;border-top-left-radius: 20px;border-bottom-left-radius: 20px;outline: none !important;background: transparent;}
       #search-submit {width: 34px;height: 34px;background: transparent;border: 1px solid gray; margin-left: -6px;margin-right: 10px;border-left: none !important;border-top-right-radius: 20px;border-bottom-right-radius: 20px;outline: none !important;cursor: pointer;}
-      .s_footer {
-        width: 100%;
-        position: sticky;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-      }
-      .f_widgets {
-        width: 20%;
-        float: left;
-        padding-top: 30px;
-      }
-      .f_widgets > h3 {
-        color: white;
-        font-family: 'Figue';
-        font-weight: bold;
-      }
-      .f_widgets > ul {
-        padding: 0px;
-        list-style: none;
-      }
-      .f_widgets > ul > li {
-        line-height: 30px;
-        padding-left: 15px;
-      }
-      .f_widgets > ul > li > a {
-        color: white;
-        font-family: 'GTAmerica', sans-serif;
-        text-decoration: none;
-      }
     </style>
   </head>
   <body>
-    <div class="main-content" style="position: relative;z-index: 1000;background-color: white;padding-bottom: 50px;">
+    <div class="main-content">
     <div class="hero-section" style="background-image: url(<%=thumbnail.url%>);">
     <div class="nav shop">
       <div class="left">
@@ -122,40 +92,6 @@
     </div>
     </div>
 
-  </div>
-
-  <div class="s_footer" style="background-color: rgba(50, 50, 50, 1)">
-    <div style="width: 1370px; margin: 0px auto; margin-bottom: 50px">
-      <div class="f_widgets">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><a href="">Contact Us</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Advertising</a></li>
-        </ul>
-      </div>
-      <div class="f_widgets">
-        <h3>Info + Help</h3>
-        <ul>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms &amp; Conditions</a></li>
-        </ul>
-      </div>
-      <br style="clear: both" />
-    </div>
-    <div style="width: 1370px; margin: 0px auto">
-      <p
-        style="
-          margin: 0px;
-          padding: 10px 0px;
-          color: white;
-          font-style: italic;
-          font-size: 15px;
-        "
-      >
-        &copy; <%= new Date().getFullYear() %> All Rights Reserved.
-      </p>
-    </div>
   </div>
 
   <div class="modal" id="modal">

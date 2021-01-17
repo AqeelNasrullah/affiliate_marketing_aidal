@@ -2,15 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Lifestyle</title>
+    <title>Shop By Cause</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="shop.css">
     <style>
-      #search {width: 150px;height: 30px;padding-left: 10px;border: 1px solid gray;background: transparent;border-right:none !important;margin: 0px !important;border-top-left-radius: 20px;border-bottom-left-radius: 20px;outline: none !important;}
-      #search-submit {width: 34px;height: 34px;background:transparent;border: 1px solid gray;border-left: none !important; margin-left: -6px;margin-right: 10px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;outline: none !important;cursor: pointer;}
+      #search {width: 150px;height: 30px;padding-left: 10px;border: 1px solid gray;margin: 0px !important;border-right: none !important;border-top-left-radius: 20px;border-bottom-left-radius: 20px;background: transparent;outline: none !important;}
+      #search-submit {width: 34px;height: 34px;background: transparent;border: 1px solid gray; margin-left: -6px;margin-right: 10px;border-left: none !important;border-top-right-radius: 20px;border-bottom-right-radius: 20px;outline: none !important;cursor: pointer;}
       .aboutSec {height: 389.812px !important;}
 
       .rev-cat-sort-form {
@@ -36,7 +36,7 @@
       line-height: 14px;
       text-transform: uppercase;
       padding: 15px 65px 15px 35px;
-      min-width: 300px;
+      min-width: 292px;
       color: #7F7B76;
       border: 1px solid #7F7B76;
       border-radius: 0%;
@@ -59,7 +59,6 @@
       }
       .f_widgets > h3 {
         color: white;
-        font-family: 'Figue';
         font-weight: bold;
       }
       .f_widgets > ul {
@@ -72,14 +71,14 @@
       }
       .f_widgets > ul > li > a {
         color: white;
-        font-family: 'GTAmerica', sans-serif;
+        font-style: italic;
         text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <div style="position:relative; z-index:1000;background: white">
-    <div class="hero-section-shop">
+    <div style="position: relative;z-index: 1000; background-color: white;">
+    <div class="hero-section-shoppp">
 
     <div class="nav">
       <div class="left">
@@ -90,6 +89,7 @@
         <p><a href="/shobycause">Shop By Cause</a></p>
 
       </div>
+
       <div class="Mid">
         <h2><a href="/" style="text-decoration : none;">acotu</a></h2>
       </div>
@@ -105,9 +105,9 @@
     </div>
     <div class="hr"></div>
     <div class="aboutSec">
-      <div class="left-container-shop">
-        <h2>lifestyle</h2>  <!--line 199-->
-        <p class="l-container-shop">Here you can find a curated selection of all our various shopping categories of conscious consumption. This includes our sustainable fashion and organic beauty selections, as well as other more nuanced collections of items for wellness, home, enfants and eco gifting options. With each purchase you make, a percentage goes into a noble mission at no additional cost to you. We feature brands that help the environment, those less fortunate, social justice causes, and animals in need, so you can feel good about buying them.</p>
+      <div class="left-container-shop shopbycause">
+        <h2>shop by cause</h2>
+        <p>A portion of the proceeds from items and experiences in this list go towards organizations working on COVID relief, food-insecurity funds, environment initiatives, ocean protection, racial-justice organizations, indigenous population, homelessness, education, efforts to support women’s rights, children, wildlife and many more.</p>
         <p class="home-page"><span><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span> <a href="/">Back to Home page</a></p>
       </div>
     </div>
@@ -140,7 +140,7 @@
     
     <div class="categoryy" id="Clothing">
       <h2>Clothing</h2>
-      <hr class="inner__hr">
+
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Clothing"){%>
@@ -171,7 +171,7 @@
     <div class="categoryy" id="Beauty & Skincare">
       <h2>Beauty and Skincare</h2>
 
-      <hr class="inner__hr">
+
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Beauty & Skincare"){%>
@@ -203,7 +203,7 @@
 <hr>
     <div class="categoryy" id="Bath & Body">
       <h2>Bath & Body</h2>
-        <hr class="inner__hr">
+
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Bath & Body"){%>
@@ -242,7 +242,7 @@
 
     <div class="categoryy" id="Accessories">
       <h2>Accessories</h2>
-        <hr class="inner__hr">
+
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Accessories"){%>
@@ -275,7 +275,7 @@
 
     <div class="categoryy" id="Home">
       <h2>Home</h2>
-        <hr class="inner__hr">
+
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Home"){%>
@@ -310,7 +310,7 @@
     <div class="categoryy" id="Jewelery">
       <hr>
       <h2>Jewelry</h2>
-      <hr class="inner__hr">
+
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Jewelry"){%>
@@ -341,7 +341,7 @@
 <hr>
     <div class="categoryy" id="Kids" style="padding-bottom: 30px;">
       <h2>Kids</h2>
-      <hr class="inner__hr">
+      
       <div class="content" id="content">
         <%items.forEach(item =>{%>
           <% if(item.sub_category == "Kids"){%>
@@ -363,46 +363,46 @@
       <div class="container__load-more" id="container__load-more">
         <a class="btn-light btn-lg load-more" name="button" id="load-more" onclick="loadmore('Kids')">LOAD MORE</a>
       </div>
-
+      
       <p id="No-more" class="No-more">NO MORE ITEMS TO LOAD</p>
     </div>
     </div>
-
-  </div>
-
-  <div class="s_footer" style="background-color: rgba(50, 50, 50, 1)">
-    <div style="width: 1370px; margin: 0px auto; margin-bottom: 50px">
-      <div class="f_widgets">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><a href="">Contact Us</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Advertising</a></li>
-        </ul>
-      </div>
-      <div class="f_widgets">
-        <h3>Info + Help</h3>
-        <ul>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms &amp; Conditions</a></li>
-        </ul>
-      </div>
-      <br style="clear: both" />
     </div>
-    <div style="width: 1370px; margin: 0px auto">
-      <p
-        style="
-          margin: 0px;
-          padding: 10px 0px;
-          color: white;
-          font-style: italic;
-          font-size: 15px;
-        "
-      >
-        &copy; <%= new Date().getFullYear() %> All Rights Reserved.
-      </p>
+
+    <div class="s_footer" style="background-color: rgba(50, 50, 50, 1)">
+      <div style="width: 1370px; margin: 0px auto; margin-bottom: 50px">
+        <div class="f_widgets">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Advertising</a></li>
+          </ul>
+        </div>
+        <div class="f_widgets">
+          <h3>Info + Help</h3>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <br style="clear: both" />
+      </div>
+      <div style="width: 1370px; margin: 0px auto">
+        <p
+          style="
+            margin: 0px;
+            padding: 10px 0px;
+            color: white;
+            font-style: italic;
+            font-size: 15px;
+          "
+        >
+          &copy; <%= new Date().getFullYear() %> All Rights Reserved.
+        </p>
+      </div>
     </div>
-  </div>
 
     <!-- SUBCATEGORIES:1.Beauty & Skincare
     2.Bath & Body
@@ -419,7 +419,7 @@
         <h1 class="title" id="title"></h1>
         <p class="description" id="description"></p>
         <div class="buttons" style="padding-bottom : 32px;">
-          <p class="item__price"><b id=price>$100</b></p>
+          <p class"item__price"><b id=price>$100</b></p>
           <a href="" class="btn-light buy-btn" id="link">Buy Now</a>
         </div>
       </div>
@@ -428,9 +428,9 @@
     <script type="text/javascript" src="./js/lifestyle.js">
 
     </script>
-      <script type="text/javascript" src="./js/modal.js"></script>
-      <script>
-        $(document).ready(function() {
+        <script type="text/javascript" src="./js/modal.js"></script>
+        <script>
+          $(document).ready(function() {
     $('#display-search').click(function() {
       $('#search-form').css('display', 'block');
       $('#close-search').css('display', 'block');
@@ -442,6 +442,6 @@
       $('#display-search').css('display', 'block');
     });
   });
-      </script>
+        </script>
   </body>
 </html>

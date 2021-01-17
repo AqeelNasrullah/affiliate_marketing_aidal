@@ -12,7 +12,6 @@ const Items = require("./models/items");
 const Blog = require("./models/blog");
 const mongoose = require("mongoose");
 const methodOveride = require("method-override");
-const { request } = require("express");
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -21,8 +20,8 @@ mongoose.connect(process.env.MONGO_URI, {
   useFindAndModify: false,
 });
 
-app.locals.baseURL = "https://affiliate-marketing-aidal.herokuapp.com";
-
+app.locals.baseURL = "http://affiliate-marketing-aidal.herokuapp.com";
+app.locals.baseURL = ;
 // app.locals.baseURL = "http://localhost:5000";
 
 app.set("view engine", "ejs");

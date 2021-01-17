@@ -21,7 +21,8 @@ mongoose.connect(process.env.MONGO_URI, {
   useFindAndModify: false,
 });
 
-app.locals.baseURL = "https://affiliate-marketing-aidal.herokuapp.com";
+// app.locals.baseURL = "http://affiliate-marketing-aidal.herokuapp.com";
+app.locals.baseURL = request.protocol + "://" + request.headers.host;
 
 // app.locals.baseURL = "http://localhost:5000";
 
@@ -37,13 +38,14 @@ app.use("/loadmore", require("./routes/loadmore"));
 app.use("/changethumbnail", require("./routes/changethumbnail"));
 
 app.get("/", async (req, res) => {
-  try {
-    const thumbnail = await Thumbnail.findOne({ id: 1 });
-    const items = await Items.find().sort({ id: -1 }).limit(12);
-    res.render("index", { thumbnail: thumbnail, items: items });
-  } catch (e) {
-    console.log(e);
-  }
+  alert(request.protocol + "://" + request.headers.host)
+  // try {
+  //   const thumbnail = await Thumbnail.findOne({ id: 1 });
+  //   const items = await Items.find().sort({ id: -1 }).limit(12);
+  //   res.render("index", { thumbnail: thumbnail, items: items });
+  // } catch (e) {
+  //   console.log(e);
+  // }
 });
 
 async function findItems(category, subArray) {
