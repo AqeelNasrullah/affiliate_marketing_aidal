@@ -63,12 +63,12 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding : 5px;
-  padding-top: 20px;
+  padding : 1px;
+  padding-top: 10px;
 }
 
 .Mid{
-  padding: 5px;
+  padding: 0px;
   font-family: 'Figue', sans-serif;
 }
 
