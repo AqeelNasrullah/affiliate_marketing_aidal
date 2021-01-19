@@ -161,6 +161,11 @@ p.no{
   text-transform: uppercase;
   font-size: 10px;
 }
+p.yes{
+  margin-top: -30px;
+  font-family: 'Figue';
+  font-size: 30px;
+}
 
 
 .btn-light:hover{
