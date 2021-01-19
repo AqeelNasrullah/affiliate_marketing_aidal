@@ -220,19 +220,26 @@ text-transform: uppercase;
 
 p.p-container-shop{
   width: 900px;
+  margin-left:29px ;
 }
 p.l-container-shop{
   width: 900px;
+  margin-left: 29px;
 }
 p.g-container-shop{
   width: 900px;
+  margin-left: 29px;
+}
+p.x{
+  margin-left: 29px;
 }
 
 .left-container-shop h2{
   font-family: 'Figue';
   color: #5B5245;
   font-size: 4.625rem;
-  line-height: 5.125rem
+  line-height: 5.125rem;
+  margin-left: 28px;
 }
 
 
