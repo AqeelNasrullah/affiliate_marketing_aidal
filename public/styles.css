@@ -121,14 +121,14 @@ p a:hover{
 .aboutSec{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin : 5vh 5vw;
+  margin-left :20px ;
   justify-content: center;
   align-items: center;
   color: white;
 }
 
 .left-container p{
-  font-size: 60px;
+  font-size: 40px;
   font-family: 'Figue';
 }
 
