@@ -128,7 +128,14 @@ p a:hover{
 }
 
 .left-container p{
-  font-size: 40px;
+  font-size: 30px;
+  font-family: 'Figue';
+  margin-top: 70px;
+}
+
+p.no{
+  margin-top: 0px;
+  font-size: 30px;
   font-family: 'Figue';
 }
 
