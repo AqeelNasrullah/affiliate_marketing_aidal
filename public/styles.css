@@ -46,7 +46,7 @@ body{
 .hero-section{
   background-size: cover;
   /* background-color: #B4B0A5; */
-  height: 63vh;
+  height: 100vh;
 }
 .nav.shop{
   color : #7f7b76 !important;
