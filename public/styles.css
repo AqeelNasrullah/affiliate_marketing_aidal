@@ -240,6 +240,7 @@ p.x{
   font-size: 4.625rem;
   line-height: 5.125rem;
   margin-left: 29px;
+  margin-top: -5px;
 }
 
 
@@ -248,7 +249,7 @@ p.x{
 }
 
 .left-container-shop p{
-  font-family: 'Domain';
+  font-family: 'Arial';
   font-size: 1rem;
   line-height: 1.5rem;
   color : #7F7B76 !important;
