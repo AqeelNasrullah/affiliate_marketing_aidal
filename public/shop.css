@@ -73,7 +73,11 @@ p a{
 }
 .home-page-x{
   margin-left: 29px;
-  padding-top: 1vh;
+  padding-top: 4.5vh;
+}
+.home-page-l{
+  margin-left: 29px;
+  padding-top: 4.5vh;
 }
 
 /* p.home-page-s{
