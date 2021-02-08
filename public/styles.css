@@ -105,8 +105,8 @@ p a{
 }
 
 p a:hover{
-  background: white;
-  color: black;
+  background: black;
+  color: white;
   transition: 0.5s;
 }
 
