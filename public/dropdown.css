@@ -9,12 +9,12 @@
 .sidebarr{
   top: 55px;
   position: absolute;
-  padding: 32px;
+  padding: 32px 0px 32px 0px;
   border : 1px solid #5B5245;
   background: white;
-  width : 300px;
+  /* width : 300px; */
   text-align: center;
-  left : -30%;
+  left : -15%;
   z-index: -1;
   opacity: 0;
   transition: 0.4s;
@@ -31,7 +31,7 @@ label p{
   font-size: 16px;
   cursor: pointer;
   border : 1px solid #5B5245;
-  padding:  8px 32px;
+  padding:  8px 9px;
   color: #9D9A96;
 }
 label i{
