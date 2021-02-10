@@ -1,0 +1,45 @@
+#res-menu{
+  display: none;
+}
+
+.dropdown_sub{
+  position: relative;
+}
+
+.sidebarr{
+  top: 55px;
+  position: absolute;
+  padding: 32px;
+  border : 1px solid #5B5245;
+  background: white;
+  width : 300px;
+  text-align: center;
+  left : -30%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.4s;
+
+}
+
+.sidebarr a{
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+label p{
+  font-size: 16px;
+  cursor: pointer;
+  border : 1px solid #5B5245;
+  padding:  8px 32px;
+  color: #9D9A96;
+}
+label i{
+  font-size: 16px;
+}
+
+#res-menu:checked ~ #sidebar{
+  z-index: 1;
+  opacity: 1;
+  transition: 0.4s;
+}
