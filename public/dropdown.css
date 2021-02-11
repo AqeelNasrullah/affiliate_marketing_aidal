@@ -1,5 +1,6 @@
 #res-menu{
   display: none;
+  font-family: 'GTAmerica';
 }
 
 .dropdown_sub{
@@ -7,7 +8,7 @@
 }
 
 .sidebarr{
-  top: 55px;
+  top: 42px;
   position: absolute;
   padding: 32px 0px 32px 0px;
   border : 1px solid #5B5245;
@@ -28,7 +29,7 @@
 
 
 label p{
-  font-size: 16px;
+  font-size: 10.5px;
   cursor: pointer;
   border : 1px solid #5B5245;
   padding:  8px 9px;
