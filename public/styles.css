@@ -363,8 +363,8 @@ p.x{
 }
 
 .loading-sec.lifestyle-loading{
-  margin-top: -50px;
-  margin-bottom: 50px;
+  /* margin-top: -50px; */
+  /* margin-bottom: 50px; */
 }
 
 .loading-sec.lifestyle-loading.active{
