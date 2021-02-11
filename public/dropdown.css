@@ -15,6 +15,8 @@
   background: white;
   width : 220px;
   text-align: center;
+  font-family: 'GTAmerica';
+  font-size: 10.5px;
   left : -13%;
   z-index: -1;
   opacity: 0;
