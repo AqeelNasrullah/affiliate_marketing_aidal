@@ -28,6 +28,11 @@
   margin-bottom: 8px;
   display: block;
 }
+.sidebarr a:hover{
+  background: black;
+  color: white;
+  transition: 0.5s;
+}
 
 
 label p{
