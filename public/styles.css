@@ -376,8 +376,8 @@ p.x{
 
 
 .load-more:hover{
-  background: black;
-  color : white;
+  background: white;
+  color : black;
 }
 
 #loading-png{
