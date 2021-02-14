@@ -322,7 +322,8 @@ p.x{
 }
 .buttons a{
   margin-top: 8px;
-  padding: 10px;
+  padding: 13px;
+  font-size: 11px;
   color : #5B5245;
   text-decoration: none;
   transition: 0.5s;
