@@ -109,7 +109,7 @@ p a:hover{
   color: black;
   transition: 0.5s;
 }
-.new:hover{
+.neww p a:hover{
   background:#5B5245;
   color: white;
   transition: 0.5s;
