@@ -6,4 +6,4 @@ const thumbnailSchema = mongoose.Schema({
   url : String
 })
 
-module.exports = mongoose.model("thumbnail",thumbnailSchema);
+module.exports = mongoose.model("Thumbnails",thumbnailSchema);

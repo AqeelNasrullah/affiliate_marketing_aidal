@@ -4,6 +4,8 @@ const bycrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/users");
 const verify = require("../middleware/verify");
+const mongoose = require("mongoose")
+
 const router = express.Router();
 const key = process.env.SECERT_KEY;
 

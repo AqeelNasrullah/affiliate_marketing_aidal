@@ -109,7 +109,16 @@ p a:hover{
   color: black;
   transition: 0.5s;
 }
-
+.new{
+  background: white;
+  color: black;
+  transition: 0.5s;  
+}
+.new:hover{
+  background:#5B5245;
+  color: white;
+  transition: 0.5s;
+}
 .hr{
   height: 1px;
   background: white;

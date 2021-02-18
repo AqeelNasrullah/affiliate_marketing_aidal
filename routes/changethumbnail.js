@@ -4,6 +4,7 @@ const verify = require("../middleware/verify");
 const cloudinary = require("../handlers/cloudinary");
 const upload = require("../handlers/multer");
 const router = express.Router();
+const mongoose = require("mongoose")
 
 router.get("/:id", (req, res) => {
   res.render("change", { item_id: req.params.id });

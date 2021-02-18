@@ -13,13 +13,20 @@ const Blog = require("./models/blog");
 const mongoose = require("mongoose");
 const methodOveride = require("method-override");
 const { request } = require("express");
+try {
+  const connectingMongo = async () => {
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+    await mongoose.connect("mongodb+srv://aida:aida1234@cluster0.c80uj.mongodb.net/affiliate?retryWrites=true&w=majority" , {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    });
+  }
+  connectingMongo()
+} catch (error) {
+  console.log(error)
+}
 
 app.locals.baseURL = "https://affiliate-marketing-aidal.herokuapp.com";
 
@@ -186,7 +193,7 @@ app.get("/:name", (req, res) => {
 // 7 Books
 // 8 kid
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Server up on port ${port}`);
