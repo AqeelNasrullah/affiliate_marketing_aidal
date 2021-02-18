@@ -105,13 +105,13 @@ p a{
 }
 
 p a:hover{
-  background: white;
-  color: black;
+  background:#5B5245;
+  color: white;
   transition: 0.5s;
 }
 .neww:hover{
-  background:#5B5245;
-  color: white;
+  background:white;
+  color: black;
   transition: 0.5s;
 }
 .hr{
