@@ -109,7 +109,14 @@ p a:hover{
   color: white;
   transition: 0.5s;
 }
-.neww:hover{
+.neww {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding : 1px;
+  padding-top: 10px;
+}
+.neww p a:hover{
   background:white;
   color: black;
   transition: 0.5s;
