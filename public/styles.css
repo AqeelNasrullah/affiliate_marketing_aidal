@@ -364,6 +364,10 @@ p.x{
   margin-top: 100px;
   /* margin-bottom: -20px; */
 }
+.containerr__load-more{
+  margin-top: 100px;
+  margin-bottom: -20px;
+}
 
 .load-more{
   color : black;
