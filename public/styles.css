@@ -420,6 +420,7 @@ p.x{
   background: rgba(0,0,0,0.3);
   top :0;
   display: none;
+  z-index: 1000;
 }
 
 .modal-content{
