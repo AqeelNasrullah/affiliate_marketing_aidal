@@ -357,10 +357,12 @@ p.x{
 .loading-sec{
   text-align: center;
   /* margin : 32px; */
+  margin-bottom: -20px;
 }
 
 .container__load-more{
   margin-top: 100px;
+  margin-bottom: -20px;
 }
 .load-more{
   color : black;
