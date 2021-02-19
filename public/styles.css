@@ -185,8 +185,8 @@ p.yes{
 
 
 .btn-light:hover{
-  background: white;
-  color : black;
+  background: #5B5245;
+  color : white;
   transition: 0.5s;
 }
 
