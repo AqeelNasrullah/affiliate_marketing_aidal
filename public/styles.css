@@ -109,6 +109,11 @@ p a:hover{
   color: white;
   transition: 0.5s;
 }
+.home-page-l a:hover{
+  background: #5B5245;
+  color: white;
+  transition: 0.5s;
+}
 .neww {
   display: flex;
   justify-content: space-between;
