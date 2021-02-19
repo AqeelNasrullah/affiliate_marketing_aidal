@@ -357,7 +357,7 @@ p.x{
 .loading-sec{
   text-align: center;
   /* margin : 32px; */
-  margin-bottom: -20px;
+  /* margin-bottom: -20px; */
 }
 
 .container__load-more{
