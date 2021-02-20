@@ -158,7 +158,7 @@ app.get("/storieslist", verify, (req, res) => {
 });
 
 app.get('/learnmore', (req, res) => {
-res.render("learnmore");
+res.sendFile(__dirname+"/learnmore.ejs")
 });
 
 app.get("/:name", (req, res) => {
