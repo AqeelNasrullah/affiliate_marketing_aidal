@@ -159,12 +159,21 @@ app.get("/storieslist", verify, (req, res) => {
 
 app.get('/learnmore', (req, res) => {
 res.render("learnmore");
-// (__dirname+"/learnmore.ejs");
 });
 app.get('/contact', (req, res) => {
 res.render("contact");
-// (__dirname+"/learnmore.ejs");
 });
+app.get('/advertising', (req, res) => {
+  res.render("advertising");
+  });
+app.get('/about', (req, res) => {
+res.render("about");
+});
+app.get('/privacy', (req, res) => {
+  res.render("privacy");
+  });
+  
+
 app.get("/:name", (req, res) => {
   res.send("404 not found");
 });
