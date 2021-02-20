@@ -172,7 +172,10 @@ res.render("about");
 app.get('/privacy', (req, res) => {
   res.render("privacy");
   });
-  
+
+app.get('/terms', (req, res) => {
+    res.render("terms");
+    });  
 
 app.get("/:name", (req, res) => {
   res.send("404 not found");
