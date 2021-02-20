@@ -157,6 +157,10 @@ app.get("/storieslist", verify, (req, res) => {
   res.render("stories-list", {count: 3, items: items});
 });
 
+app.get('/learnmore', (req, res) => {
+  res.sendFile(__dirname+"/learnmore.ejs")
+});
+
 app.get("/:name", (req, res) => {
   res.send("404 not found");
 });
