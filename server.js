@@ -163,8 +163,8 @@ res.render("learnmore");
 app.get('/contact', (req, res) => {
 res.render("contact");
 });
-app.get('/advertising', (req, res) => {
-  res.render("advertising");
+app.get('/advertisement', (req, res) => {
+  res.render("advertisement");
   });
 app.get('/about', (req, res) => {
 res.render("about");
