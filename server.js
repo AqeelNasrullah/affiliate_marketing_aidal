@@ -161,7 +161,10 @@ app.get('/learnmore', (req, res) => {
 res.render("learnmore");
 // (__dirname+"/learnmore.ejs");
 });
-
+app.get('/contact', (req, res) => {
+res.render("contact");
+// (__dirname+"/learnmore.ejs");
+});
 app.get("/:name", (req, res) => {
   res.send("404 not found");
 });
