@@ -149,9 +149,9 @@
         </label>
         <div class="sidebarr" id="sidebar">
           <a href="#Home"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Home</p></a>
-          <a href="#"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">wellness</p></a>
+          <a href="#Wellness"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">wellness</p></a>
           <a href="#Beauty & Skincare"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Beauty</p></a>
-          <a href="#"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Skincare</p></a>
+          <a href="#Skincare"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Skincare</p></a>
           <a href="#Bath & Body"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Bath & Body</p></a>
           <a href="#Accessories"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Accessories</p></a>
           <a href="#Jewelery"><p class="qsa" style=" width: 70%; margin: 0 15% 0 15%; border: none;">Jewelry</p></a>
@@ -217,6 +217,49 @@
       </div>
       
     </div>
+    <!--Wellness-->
+    <div class="categoryy" id="Wellness">
+      <div class="content" id="content">
+        <%items.forEach(item =>{%>
+          <% if(item.sub_category == "Wellness"){%>
+        <div class="items">
+          <img src="<%=item.thumbnail%>" alt="">
+          <h3 style="margin:0;"><%=item.name%></h3>
+          <p class="item__desc"><%=item.desc.substring(0,351)%>
+              <b style="cursor : pointer;" onclick="modal({name : '<%=item.name%>' , description : `<%=item.desc%>`, price : '<%=item.price%>' , link : '<%=item.link%>'})">Read More</b> </p>
+
+             <div class="buttons">
+            <p class="item__price"><b><%=item.price%></b></p>
+            <a href="<%=item.link%>" class="btn-light buy-btn">CHECK IT OUT</a>
+          </div>
+        </div>
+        <% } %>
+        <%})%>
+      </div>
+      
+    </div>
+    <!--Skincare-->
+    <div class="categoryy" id="Skincare">
+      <div class="content" id="content">
+        <%items.forEach(item =>{%>
+          <% if(item.sub_category == "Skincare"){%>
+        <div class="items">
+          <img src="<%=item.thumbnail%>" alt="">
+          <h3 style="margin:0;"><%=item.name%></h3>
+          <p class="item__desc"><%=item.desc.substring(0,351)%>
+              <b style="cursor : pointer;" onclick="modal({name : '<%=item.name%>' , description : `<%=item.desc%>`, price : '<%=item.price%>' , link : '<%=item.link%>'})">Read More</b> </p>
+
+             <div class="buttons">
+            <p class="item__price"><b><%=item.price%></b></p>
+            <a href="<%=item.link%>" class="btn-light buy-btn">CHECK IT OUT</a>
+          </div>
+        </div>
+        <% } %>
+        <%})%>
+      </div>
+      
+    </div>
+
 
     <!-- Bath & Body -->
 

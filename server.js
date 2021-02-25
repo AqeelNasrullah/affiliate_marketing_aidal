@@ -75,6 +75,8 @@ app.get("/lifestyle", async (req, res) => {
     let sub = [
       "Clothing",
       "Home",
+      "Wellness",
+      "Skincare",
       "Beauty & Skincare",
       "Accessories",
       "Bath & Body",
