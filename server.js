@@ -80,7 +80,7 @@ app.get("/lifestyle", async (req, res) => {
       "Beauty & Skincare",
       "Accessories",
       "Bath & Body",
-      "Jewelry",
+      "Jewelery",
       "Kids",
     ];
     let items = await findItems("lifestyle", sub);
