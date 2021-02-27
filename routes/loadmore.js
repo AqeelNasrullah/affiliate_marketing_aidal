@@ -20,7 +20,7 @@ catch(e){
 router.post("/:category/:sub_category",async(req,res)=>{
   try{
     const count = req.body.count;
-    const items = await Items.find({$and : [{category : req.params.category , sub_category : req.params.sub_category}]}).skip(count*4).limit(4).sort({id:-1});
+    const items = await Items.find({$and : [{category : req.params.category , sub_category : req.params.sub_category}]}).skip(count*12).limit(4).sort({id:-1});
     res.send(items);
   }
   catch(e){
