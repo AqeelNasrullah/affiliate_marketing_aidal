@@ -182,7 +182,7 @@ app.get('/terms', (req, res) => {
 app.get("/:name", (req, res) => {
   res.send("404 not found");
 });
-app.get('/homesearch', async ( req, res) => {
+app.get('/home/search', async ( req, res) => {
   try {
     const thumbnail = await Thumbnail.findOne({ id: 1 });
     const items = await Items.find().sort({ id: -1 }).limit(12);
